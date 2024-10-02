@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payout Report</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <!-- <link rel="stylesheet" href="/public/viewer.css"> -->
+   
+</head>
+<body>
+    
+        <div class="flex items-center justify-between space-x-4 bg-gray-50 p-4 rounded-lg shadow-sm">
+             <!-- Game Name Dropdown -->
+             <div class="flex items-center space-x-2 md:hidden">
+               
+              </div>
+          
+             <!-- Date Range Dropdown Container -->
+  <div class="max-w-sm mx-auto">
+    <div class="relative inline-block w-full text-left">
+      <!-- Date Picker Dropdown Button -->
+      <div>
+        <button type="button" id="dropdownButton" class="inline-flex justify-between w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <span id="dateRangeLabel">September 3, 2024 - October 2, 2024</span>
+          <!-- Dropdown Arrow -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="ml-2 h-5 w-5">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Dropdown Menu -->
+      <div id="dropdownMenu" class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
+        <div class="py-1" role="none">
+          <button class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" id="todayBtn">Today</button>
+          <button class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" id="yesterdayBtn">Yesterday</button>
+          <button class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" id="last7DaysBtn">Last 7 Days</button>
+          <button class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" id="last30DaysBtn">Last 30 Days</button>
+          <button class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" id="thisMonthBtn">This Month</button>
+          <button class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" id="lastMonthBtn">Last Month</button>
+          <button class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" id="customRangeBtn">Custom</button>
+        </div>
+
+        <!-- Submit and Clear Buttons -->
+        <div class="flex justify-between px-4 py-2 border-t">
+          <button id="submitBtn" class="bg-indigo-500 hover:bg-indigo-600 text-white px-3 py-1 rounded-md">Submit</button>
+          <button id="clearBtn" class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md">Clear</button>
+        </div>
+      </div>
+    </div>
+  </div>   
+              
+          
+            <!-- Game Name Dropdown -->
+            <div class="md:flex items-center spa ce-x-2 hidden">
+            
+            </div>
+          </div>
+        
+          <!-- Embed the Full PDF.js Viewer -->
+   <iframe src="../../../src/test.pdf" width="100%" height="700px"></iframe>
+      
+    </div>
+    
+   
+</body>
+</html>
