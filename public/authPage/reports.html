@@ -626,65 +626,69 @@
       <main class="lg:ml-[17rem]">
         <div class="px-4 sm:px-6 lg:px-8">
           
-          <div class="container mx-auto py-2 px-5">
-            <!-- Report Dashboard (this section will be hidden when a report is selected) -->
-            <div id="dashboard" class="mb-12">
-              <div class="text-center">
-                <h1 class="text-4xl font-bold text-gray-800">Reports Dashboard</h1>
-                <p class="text-lg text-gray-500 mt-3">Explore your reports and statements with ease</p>
-              </div>
+          <div class="container mx-auto py-2 px-5 ">
+           <!-- Report Dashboard (this section will be hidden when a report is selected) -->
+<div id="dashboard" class="mb-8 px-4 sm:px-6 lg:px-8">
+  <div class="text-center">
+    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800">Reports Dashboard</h1>
+    <p class="text-base sm:text-lg text-gray-500 mt-2">Explore your reports and statements with ease</p>
+  </div>
 
-              <!-- Reports Grid -->
-              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
-                <!-- Sales Report Card -->
-                <div onclick="navigateToSection('/public/authPage/report_pages/salesReport.html')"
-                  class="group relative cursor-pointer bg-white shadow-lg rounded-xl overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2">
-                  <img src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?q=80&w=2974&auto=format&fit=crop" alt="Sales Report" class="w-full h-52 object-cover" />
-                  <div class="p-6">
-                    <h2 class="text-lg font-semibold text-gray-800 uppercase mb-2">Sales Report</h2>
-                    <p class="text-sm text-gray-600 mb-4">Analyze the performance of sales with detailed insights.</p>
-                    <a href="#salesReport" class="inline-flex items-center text-white bg-indigo-500 px-4 py-2 rounded-md font-semibold hover:bg-indigo-600 transition">
-                      <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                      </svg>
-                      View Report
-                    </a>
-                  </div>
-                </div>
+  <!-- Reports Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 mt-6">
+    <!-- Sales Report Card -->
+    <div class="group relative cursor-pointer bg-white shadow-lg rounded-xl overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2">
+      <div class="aspect-w-16 aspect-h-9">
+        <img src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?q=80&w=2974&auto=format&fit=crop" alt="Sales Report" class="object-cover w-full h-full" />
+      </div>
+      <div class="p-4 sm:p-6">
+        <h2 class="text-base sm:text-lg font-semibold text-gray-800 uppercase mb-1 sm:mb-2">Sales Report</h2>
+        <p class="text-sm text-gray-600 mb-3">Analyze the performance of sales with detailed insights.</p>
+        <a href="#salesReport" class="inline-flex items-center text-white bg-indigo-500 px-3 py-2 rounded-md font-semibold hover:bg-indigo-600 transition">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+          </svg>
+          View Report
+        </a>
+      </div>
+    </div>
 
-                <!-- Payout Report Card -->
-                <div onclick="navigateToSection('./report_pages/payoutReport.html')"
-                  class="group relative cursor-pointer bg-white shadow-lg rounded-xl overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2">
-                  <img src="https://images.unsplash.com/photo-1707761918029-1295034aa31e?q=80&w=3073&auto=format&fit=crop" alt="Payout Report" class="w-full h-52 object-cover" />
-                  <div class="p-6">
-                    <h2 class="text-lg font-semibold text-gray-800 uppercase mb-2">Payout Report</h2>
-                    <p class="text-sm text-gray-600 mb-4">Stay updated on your payout and transactions.</p>
-                    <a href="#payoutReport" class="inline-flex items-center text-white bg-indigo-500 px-4 py-2 rounded-md font-semibold hover:bg-indigo-600 transition">
-                      <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                      </svg>
-                      View Report
-                    </a>
-                  </div>
-                </div>
+    <!-- Payout Report Card -->
+    <div class="group relative cursor-pointer bg-white shadow-lg rounded-xl overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2">
+      <div class="aspect-w-16 aspect-h-9">
+        <img src="https://images.unsplash.com/photo-1707761918029-1295034aa31e?q=80&w=3073&auto=format&fit=crop" alt="Payout Report" class="object-cover w-full h-full" />
+      </div>
+      <div class="p-4 sm:p-6">
+        <h2 class="text-base sm:text-lg font-semibold text-gray-800 uppercase mb-1 sm:mb-2">Payout Report</h2>
+        <p class="text-sm text-gray-600 mb-3">Stay updated on your payout and transactions.</p>
+        <a href="#payoutReport" class="inline-flex items-center text-white bg-indigo-500 px-3 py-2 rounded-md font-semibold hover:bg-indigo-600 transition">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+          </svg>
+          View Report
+        </a>
+      </div>
+    </div>
 
-                <!-- Agent Credit Statement Card -->
-                <div onclick="navigateToSection('./report_pages/agent_credit_statement.html')"
-                  class="group relative cursor-pointer bg-white shadow-lg rounded-xl overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2">
-                  <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop" alt="Agent Credit Statement" class="w-full h-52 object-cover" />
-                  <div class="p-6">
-                    <h2 class="text-lg font-semibold text-gray-800 uppercase mb-2">Agent Credit Statement</h2>
-                    <p class="text-sm text-gray-600 mb-4">Monitor agent credit and balance updates.</p>
-                    <a href="#agentCreditStatement" class="inline-flex items-center text-white bg-indigo-500 px-4 py-2 rounded-md font-semibold hover:bg-indigo-600 transition">
-                      <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                      </svg>
-                      View Statement
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <!-- Agent Credit Statement Card -->
+    <div class="group relative cursor-pointer bg-white shadow-lg rounded-xl overflow-hidden transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2">
+      <div class="aspect-w-16 aspect-h-9">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop" alt="Agent Credit Statement" class="object-cover w-full h-full" />
+      </div>
+      <div class="p-4 sm:p-6">
+        <h2 class="text-base sm:text-lg font-semibold text-gray-800 uppercase mb-1 sm:mb-2">Agent Credit Statement</h2>
+        <p class="text-sm text-gray-600 mb-3">Monitor agent credit and balance updates.</p>
+        <a href="#agentCreditStatement" class="inline-flex items-center text-white bg-indigo-500 px-3 py-2 rounded-md font-semibold hover:bg-indigo-600 transition">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+          </svg>
+          View Statement
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
 
             <!-- Report Content Area (hidden by default) -->
             <div id="report-content" class="hidden">

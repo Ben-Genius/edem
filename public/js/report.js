@@ -17,6 +17,7 @@ function initializeProfileDropdown() {
 }
 
 // Function to navigate to a report section
+// Function to navigate to a report section
 async function navigateToSection(reportFile) {
   const reportContent = document.getElementById('report-content');
   const dashboard = document.getElementById('dashboard');
@@ -31,21 +32,38 @@ async function navigateToSection(reportFile) {
       }
       const html = await response.text();
       reportContent.innerHTML = html;
+
+      // Extract and execute scripts
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = html;
+      const scripts = tempDiv.querySelectorAll('script');
+      scripts.forEach((script) => {
+          const newScript = document.createElement('script');
+          if (script.src) {
+              // For external scripts
+              newScript.src = script.src;
+          } else {
+              // For inline scripts
+              newScript.textContent = script.textContent;
+          }
+          document.body.appendChild(newScript);
+      });
   } catch (error) {
       console.error('Error loading report:', error);
       reportContent.innerHTML = `<p class="text-red-600">Failed to load report. Please try again later.</p>`;
   }
 }
 
+
 // Handle hash changes in the URL
 function handleHashChange() {
-  const hash = window.location.hash.substring(1);
-  if (hash) {
-      navigateToSection(`${hash}.html`);
-  } else {
-      document.getElementById('dashboard').classList.remove('hidden');
-      document.getElementById('report-content').classList.add('hidden');
-  }
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+        navigateToSection(`${hash}.html`);
+    } else {
+        document.getElementById('dashboard').classList.remove('hidden');
+        document.getElementById('report-content').classList.add('hidden');
+    }
 }
 
 function initializePasswordDrawer() {
