@@ -131,3 +131,11 @@ if (document.readyState === 'loading') {
 } else {
     initializeSalesReportDropdown();
 }
+
+// Add this at the end of the file
+if (!sessionStorage.getItem('salesReportRefreshed')) {
+    sessionStorage.setItem('salesReportRefreshed', 'true');
+    location.reload();
+} else {
+    sessionStorage.removeItem('salesReportRefreshed');
+}
