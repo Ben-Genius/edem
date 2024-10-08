@@ -1,14 +1,4 @@
-// Login functionality
-function initializeLogin() {
-    const loginForm = document.getElementById('loginForm');
-    if (loginForm) {
-        loginForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            // Navigate to the dashboard page
-            window.location.href = '/public/authPage/dashboard.html';
-        });
-    }
-}
+
 
 // Sidebar toggle functionality
 function initializeSidebar() {
@@ -16,29 +6,26 @@ function initializeSidebar() {
     const closeSidebarButton = document.getElementById('closeSidebar');
 
     const mobileMenu = document.querySelector('.lg\\:hidden');
-    const upwardIcon = openSidebarButton.querySelector('svg:nth-child(1)');
-    const downwardIcon = openSidebarButton.querySelector('svg:nth-child(2)');
+    // const upwardIcon = openSidebarButton.querySelector('svg:nth-child(1)');
+    // const downwardIcon = openSidebarButton.querySelector('svg:nth-child(2)');
 
     if (openSidebarButton && closeSidebarButton && mobileMenu) {
         openSidebarButton.addEventListener('click', function () {
 
             mobileMenu.classList.remove('hidden');
-            upwardIcon.classList.add('hidden');
-            downwardIcon.classList.remove('hidden');
+            // upwardIcon.classList.add('hidden');
+            // downwardIcon.classList.remove('hidden');
         });
 
         closeSidebarButton.addEventListener('click', function () {
 
             mobileMenu.classList.add('hidden');
-            upwardIcon.classList.remove('hidden');
-            downwardIcon.classList.add('hidden');
+            // upwardIcon.classList.remove('hidden');
+            // downwardIcon.classList.add('hidden');
         });
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    
-  });
 
 function initializeProfileDropdown() {
     const userMenuButton = document.getElementById('user-menu-button');
@@ -228,19 +215,32 @@ function initializeCharts() {
     });
 }
 
+function initializeMobileMenu() {
+  const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu"]');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton.addEventListener('click', function() {
+      const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+      this.setAttribute('aria-expanded', !expanded);
+      mobileMenu.classList.toggle('hidden');
+  });
+}
+
+
 // Main initialization function
 function initializeApp() {
-    initializeLogin();
     initializeSidebar();
     initializeProfileDropdown();
     initializeCharts();
     initializeTopupModal(); 
     initializePasswordDrawer(); 
     initializeViewMoreButton();
+    initializeMobileMenu();
     // Other initialization functions...
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+
     console.log('DOM fully loaded and parsed'); // This should show up in the console when the page is ready
     initializeApp();
 });

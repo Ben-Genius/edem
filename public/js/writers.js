@@ -1,11 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu"]');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton.addEventListener('click', function() {
+      const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+      this.setAttribute('aria-expanded', !expanded);
+      mobileMenu.classList.toggle('hidden');
+
+      // Toggle between menu open and close icons
+      // this.querySelector('svg:nth-child(1)').classList.toggle('hidden');
+      // this.querySelector('svg:nth-child(2)').classList.toggle('hidden');
+  });
     document.getElementById("e").value = new Date().toISOString().substring(0, 10);
 
     // Initialize all dropdowns and modals
     initializeDropdowns();
     initializeProfileDropdown();
     initializeEditModal();
-    initializeSidebar();
     initializeTopupModal();  // Wallet top-up modal initialized
     initializePasswordDrawer();  // Password drawer initialized
     handleRouteChange();

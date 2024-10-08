@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo Lotto Project</title>
+    <title>Sales Report </title>
     <link rel="stylesheet" href="styles.css" >
 </head>
 <body class="h-full">
@@ -13,7 +13,7 @@
     <div class="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
       <div class="mx-auto w-full max-w-sm lg:w-96">
         <div>
-          <img class="h-20 w-auto" src="/public/assets/logo.png" alt="Company logo">
+          <img class="h-20 w-auto" src="./assets/logo.png" alt="Company logo">
           <h2 class="mt-8 text-2xl font-bold leading-9 tracking-tight text-gray-900">Sign in to your account</h2>
           <p class="mt-2 text-sm leading-6 text-gray-500">
             Welcome To
@@ -65,7 +65,18 @@
       <img class="absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1496917756835-20cb06e75b4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80" alt="">
     </div>
   </div>
-  <script src="/public/js/main.js"></script>
+  <script>
+
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Navigate to the dashboard page
+            window.location.href = '/public/authPage/dashboard.html';
+        });
+    }
+
+  </script>
 
 </body>
 </html>
